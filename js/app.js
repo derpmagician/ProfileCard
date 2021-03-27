@@ -1,5 +1,3 @@
-console.log("Mensajito")
-
 const getRandomInt = (min, max) => {// Retorna un entero aleatorio entre min (incluido) y max (excluido)
     return Math.floor(Math.random() * (max - min)) + min;
 }// ¡Usando Math.round() te dará una distribución no-uniforme!
