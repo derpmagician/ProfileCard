@@ -3,6 +3,7 @@
   --vdrk-desaturated-blue: hsl(229, 23%, 23%);
   --drk-grayish-blue: hsl(227, 10%, 46%);
   --drk-gray: hsl(0, 0%, 59%);
+  --img-size: 192px;
 }
 
 html {
@@ -22,10 +23,6 @@ body {
   background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
   background-repeat: no-repeat, no-repeat;
   background-position: right 50vw bottom 50vh, left 50vw top 50vh;
-}
-
-h1 {
-  font-size: 2.5rem;
 }
 
 .flex {
@@ -70,18 +67,22 @@ h1 {
 }
 
 .card-body-img {
+  width: var(--img-size);
+  height: var(--img-size);
   border: 5px solid seashell;
   border-radius: 50%;
-  margin-top: calc(-75px - 5px);
+  margin-top: calc(-1*var(--img-size)/2 - 5px);
 }
 
 .card-body-title {
-  font-size: 1.8rem;
+  font-size: 3rem;
   margin-top: 2rem;
+  text-transform: capitalize;
 }
 
 .card-body-title span {
   color: var(--drk-grayish-blue);
+  font-size: 2rem;
   font-weight: 400;
 }
 
