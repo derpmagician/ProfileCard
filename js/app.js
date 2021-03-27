@@ -7,9 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {//Carga el contenido a coge
     fetchData(random)
 })
 
-const fetchData= async (id) => {//alt 96 ``
+const fetchData= async (id) => {
     try{
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)//alt 96 ``
         const data = await res.json()
 
         console.log(data)
