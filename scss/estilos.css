@@ -2,7 +2,7 @@
   --drk-cyan: hsl(185, 15%, 19%);
   --vdrk-desaturated-blue: hsl(229, 23%, 23%);
   --drk-grayish-blue: hsl(227, 10%, 46%);
-  --drk-gray: hsl(0, 0%, 59%);
+  --drk-gray: hsl(0, 10%, 59%);
   --img-size: 192px;
 }
 
@@ -24,6 +24,8 @@ body {
 }
 
 footer {
+  display: flex;
+  justify-content: flex-end;
   color: var(--drk-gray);
 }
 
@@ -31,6 +33,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 10vh;
 }
 .btn-grp .button {
   border: none;
@@ -58,7 +61,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 85vh;
 }
 
 .card {
