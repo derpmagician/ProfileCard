@@ -1,13 +1,21 @@
-const getRandomInt = (min, max) => {// Retorna un entero aleatorio entre min (incluido) y max (excluido)
+// Retorna un entero aleatorio entre min (incluido) y max (excluido)
+// ¡Usando Math.round() te dará una distribución no-uniforme!
+const getRandomInt = (min, max) => {
     return Math.floor(Math.random() * (max - min)) + min;
-}// ¡Usando Math.round() te dará una distribución no-uniforme!
-
-document.addEventListener("DOMContentLoaded", () => {//Carga el contenido a coger despues de cargarse el html
+}
+//Carga el contenido a coger despues de cargarse el html
+document.addEventListener("DOMContentLoaded", () => {
     const random = getRandomInt(1, 898)
     fetchData(random)
 })
 
-const fetchData= async (id) => {
+function myFunction() {
+    const random = getRandomInt(1, 898)
+    //document.getElementById("demo").innerHTML = random;
+    fetchData(random)
+  }
+
+const fetchData = async (id) => {
     try{
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)//alt 96 ``
         const data = await res.json()
